@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamster Combat</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <img id="profilePic" src="https://via.placeholder.com/50" alt="User">
+    <div>
+      <h2 id="userName">(CEO)</h2>
+      <p>html-hero</p>
+    </div>
+  </div>
+  <br>
+  <div id="genderSelection">
+    <p>Select your gender:</p>
+    <button onclick="setGender('male')">Male</button>
+    <button onclick="setGender('female')" disabled>Female (Disabled)</button> <!-- این گزینه غیرفعال شده است -->
+  </div>
+  <div id="nameInput" style="display: none;">
+    <p>Enter your name:</p>
+    <input type="text" id="nameField" placeholder="Your Name">
+    <button onclick="setName()">Start Game</button>
+  </div>
+  <br>
+  <div class="info">
+    <div>
+      <p>Earn per tap</p>
+      <p><img src="2.png" alt="Hamster"> +1</p>
+    </div>
+    <div>
+      <p>Coins to level up</p>
+      <p>1M</p>
+    </div>
+    <div>
+      <p>Profit per hour</p>
+      <p><img src="2.png" alt="Hamster"> +0</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="score" id="score">
+    <img src="coin.png" alt="Coin" class="coin-icon"> 0
+  </div>
+  <br><br>
+  <div class="hamster" onclick="addCoins()">
+    <img id="clickableHamster" src="male-hamster.png" alt="Hamster">
+  </div>
+  <br><br><br><br>
+  <div class="level">
+    <p>Level <span id="currentLevel">1</span>/10</p>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+  </div>
+</div>
+<script src="script1.js"></script>
+</body>
+</html>

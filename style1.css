@@ -1,0 +1,200 @@
+/* استایل کلی بدنه صفحه */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* تنظیم کلی برای جعبه‌بندی عناصر */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* استایل دایره همستر */
+.hamster {
+  width: 300px; /* افزایش اندازه دایره همستر */
+  height: 300px; /* افزایش اندازه دایره همستر */
+  border-radius: 50%;
+  background: #021841;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+/* انیمیشن هنگام کلیک روی همستر */
+.hamster:active {
+  transform: scale(0.78); /* کوچک‌تر شدن دایره هنگام کلیک */
+}
+
+/* استایل تصویر همستر در داخل دایره */
+.hamster img {
+  width: 100%; /* اندازه تصویر همستر به اندازه دایره */
+  height: auto;
+  border-radius: 50%;
+}
+
+/* استایل سایر عناصر */
+.container {
+  width: 90%;
+  max-width: 400px;
+  background: #333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.header div {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.header div h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.header div p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #ff9900;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.info div {
+  background: #444;
+  border-radius: 5px;
+  padding: 10px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.info div p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info div p img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.info div p:first-child {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.info div p:last-child {
+  font-size: 0.75rem;
+  color: #ff9900;
+}
+
+.score {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score img {
+  width: 20px; /* تغییر اندازه تصویر سکه */
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.level p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.level .progress-bar {
+  width: 70%;
+  background: #555;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.level .progress-bar div {
+  background: #00cc00;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  transition: width 0.3s;
+}
+
+/* مدیا کوئری برای نمایش بهتر در دستگاه‌های کوچک‌تر */
+@media (max-width: 480px) {
+  .header img {
+      width: 40px;
+      height: 40px;
+  }
+  .header div h2 {
+      font-size: 0.875rem;
+  }
+  .header div p {
+      font-size: 0.625rem;
+  }
+  .info div {
+      width: 28%;
+  }
+  .score {
+      font-size: 1.25rem;
+  }
+  .score img {
+      width: 20px;
+      height: 20px;
+  }
+  .hamster {
+      width: 240px; /* افزایش اندازه دایره همستر برای دستگاه‌های کوچک‌تر */
+      height: 240px; /* افزایش اندازه دایره همستر برای دستگاه‌های کوچک‌تر */
+  }
+  .hamster img {
+      width: 100%; /* اندازه تصویر همستر به اندازه دایره */
+      height: auto;
+  }
+  .level p {
+      font-size: 0.75rem;
+  }
+}
